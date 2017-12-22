@@ -13,19 +13,18 @@ The DNSCrypt proxy will start on boot binding to port 53
 There is currently an issue with tethering.  Stop the proxy then tether works.
 
 
-From shell on device    
+From shell on device: 
 
-`
+```bash
 # get IP currently used resolver 
 hostip -r 127.0.0.1 resolver.dnscrypt.org
-
+​
 # start DNSCrypt
 dnscrypt enable 
 
 # stop DNSCrypt 
 dnscrypt disable 
-` 
-
+```
 
 To test visit https://www.dnsleaktest.com/ and do standard test.   
 
