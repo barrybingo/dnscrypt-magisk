@@ -32,7 +32,7 @@ PROPFILE=false
 POSTFSDATA=false
 
 # Set to true if you need late_start service script
-LATESTARTSERVICE=false
+LATESTARTSERVICE=true
 
 ##########################################################################################
 # Installation Message
@@ -42,7 +42,7 @@ LATESTARTSERVICE=false
 
 print_modname() {
   ui_print "*******************************"
-  ui_print "     Magisk Module Template    "
+  ui_print "     Magisk Module DNSCrypt    "
   ui_print "*******************************"
 }
 
@@ -88,4 +88,6 @@ set_permissions() {
 
   # The following is default permissions, DO NOT remove
   set_perm_recursive  $MODPATH  0  0  0755  0644
+
+  set_perm_recursive  $MODPATH/system/xbin        0       2000    0755             0755
 }

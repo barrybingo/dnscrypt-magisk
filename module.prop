@@ -1,7 +1,7 @@
-id=template
-name=Template Module
-version=v1
-versionCode=1
-author=topjohnwu
-description=A short description
+id=dnscrypt
+name=DNSCrypt
+version=2017.12.22
+versionCode=201712220
+author=barrybingo
+description=DNSCrypt and libsodium Built from source using NDK for ARM,ARM64 and x86 
 template=1400

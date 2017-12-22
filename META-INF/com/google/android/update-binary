@@ -132,6 +132,12 @@ mkdir -p $MODPATH
 ui_print "- Extracting module files"
 unzip -o "$ZIP" 'system/*' -d $MODPATH 2>/dev/null
 
+unzip -o "$ZIP" "$ARCH/*" -d $MODPATH 2>/dev/null
+
+cp -ufr  $MODPATH/$ARCH/* $MODPATH/
+
+rm -rf $MODPATH/$ARCH 2>/dev/null
+
 # Handle replace folders
 for TARGET in $REPLACE; do
   mktouch $MODPATH$TARGET/.replace
